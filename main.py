@@ -175,6 +175,10 @@ def convert():
 
   os.system(graphicsmagick)
 
+    graphicsmagick = "gm montage -geometry 640x480+10+10 " + file_path + now + "*-sm.jpg " +"-tile 1x3  montage.jpg"
+
+  os.system(graphicsmagick)
+
 # Trigger photobooth workflow
 def start_photobooth():
 
@@ -233,6 +237,7 @@ def start_photobooth():
 ########################### Begin Step 5 #################################
   print("Done")
   show_image(real_path + "/graphics/AllDone.png")
+
 
 ########################### Show upload location ###########################
   # time.sleep(prep_delay)
